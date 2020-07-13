@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Ubuntu', sans-serif;
+}
+h2 {
+  @include FontLineSize(0.2, 0.2, 0.6, 60, 1);
+}
+h3 {
+  @include FontLineSize(0.2, 0.2, 0.6, 20, 1);
+}
+p {
+    @include FontLineSize(0.2, 0.2, 0.6, 14, 1);
+}
+.light {
+  font-weight: 100;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}

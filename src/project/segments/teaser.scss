@@ -1,0 +1,18 @@
+.teaser {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(158.17deg, rgba(179, 185, 255, 0.36) 15.74%, rgba(113, 124, 237, 0.36) 93.63%), url('../img/background.svg');
+  //filter: blur(7px);
+  //-webkit-filter: blur(7px);
+  background-size: cover, cover;
+}
+
+.teaser__item {
+  @include width(330, 0.5);
+  @include min-height(330, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: RelativeUnits(60, 0.5) 0;
+  text-align: center;
+}
