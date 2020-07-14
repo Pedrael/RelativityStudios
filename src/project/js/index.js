@@ -1,17 +1,11 @@
-console.log('index.js')
-
-import { CreatePreloader } from './../../js/objects/preloader.js'
-import { CreateDroplist } from './../../js/objects/droplist.js'
-
-// CreatePreloader({
-//   className: '.preloader-test',
-//   delay: 2000,
-//   preloaderText: [
-//     'text1', 'text2', 'text3'
-//   ],
-//   textClassName: '.preloader-text'
+// var switchEl = document.querySelector('.switch')
+// switchEl.addEventListener('click', () => {
+//   if(switchEl.classList.contains('untoggled')) {
+//     switchEl.classList.remove('untoggled')
+//     switchEl.classList.add('toggled')
+//   }
+//   else {
+//     switchEl.classList.remove('toggled')
+//     switchEl.classList.add('untoggled')
+//   }
 // })
-
-CreateDroplist({
-  className: '.mihail-droplist'
-})
