@@ -1,0 +1,50 @@
+#teaser { @include CONFIGURE-c-MAIN-c(1400) {
+
+    background: #F7F7F7;
+    padding-top: RelativeUnits(170, 1);
+    border-radius: RelativeUnits(100, 0.5) RelativeUnits(100, 0.5) 0px 0px;
+    .teaser__container {
+      width: 100%;
+      display: flex;
+
+      @include _tablet-middle {
+        flex-direction: column;
+      }
+
+      .teaser__subcontainer {
+        width: 50%;
+        @include _tablet-middle {
+          width: 100%;
+        }
+
+        .teaser-list {
+          margin-top: RelativeUnits(50, 0.5);
+          display: grid;
+          grid-auto-rows: RelativeUnits(50, 0.5);
+          grid-template-columns: min-content min-content auto;
+          grid-column-gap: RelativeUnits(30, 0.5);
+          align-items: center;
+          .circle-purple {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #717CED;
+          }
+        }
+      }
+
+      .COLUMN {
+        @include margin-padding(('p-l': (170), 'm-t':(60 0.5)));
+        justify-content: flex-start;
+
+      }
+
+      .image {
+        padding-right: RelativeUnits(170, 1);
+      }
+    }
+	}
+  /* teaser */
+  background: linear-gradient(90deg, #FBC2EB 0%, #A6C1EE 100%);
+  padding-top: RelativeUnits(95, 1);
+}

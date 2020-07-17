@@ -1,8 +1,9 @@
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
 }
 h2 {
-  @include FontLineSize(0.2, 0.2, 0.6, 60, 1);
+  @include FontLineSize(0.4, 0.4, 0.2, 60, 1);
 }
 h3 {
   @include FontLineSize(0.2, 0.2, 0.6, 20, 1);
@@ -24,4 +25,19 @@ p {
 }
 .bold {
   font-weight: 700;
+}
+.red-span {
+  background: #D81B60;
+  color: #ececec;
+  border-radius: RelativeUnits(5, 0.5);
+  padding: RelativeUnits(5, 0.5);
+}
+.purple-span {
+  background: #717CED;
+  color: #ececec;
+  border-radius: RelativeUnits(5, 0.5);
+  padding: RelativeUnits(5, 0.5);
+}
+.red-color {
+  color: #D81B60;
 }

@@ -1,18 +1,19 @@
-$teaser-main-scaler: 0.5;
-.teaser {
+$adv-main-scaler: 0.5;
+.adv {
   width: 100vw;
   height: 100vh;
-  //background: linear-gradient(158.17deg, rgba(179, 185, 255, 0.36) 15.74%, rgba(113, 124, 237, 0.36) 93.63%), url('../img/background.svg');
+  background: linear-gradient(158.17deg, rgba(179, 185, 255, 0.36) 15.74%, rgba(113, 124, 237, 0.36) 93.63%), url('../img/background.svg');
   //filter: blur(7px);
   //-webkit-filter: blur(7px);
   background-size: cover, cover;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .background-item {
   position: fixed;
+  display: none;
 }
 
 .c1 {
@@ -69,19 +70,26 @@ $teaser-main-scaler: 0.5;
   left: 66%;
 }
 
-.teaser__item {
-  @include width(330, $teaser-main-scaler);
-  @include min-height(330, $teaser-main-scaler);
-  @include max-height(330, $teaser-main-scaler);
+.adv__item-wrap {
+  @include width(1100, 0.8);
+  max-width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adv__item {
+  @include width(330, $adv-main-scaler);
+  @include min-height(330, $adv-main-scaler);
+  @include max-height(330, $adv-main-scaler);
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: RelativeUnits(60, $teaser-main-scaler) RelativeUnits(60, $teaser-main-scaler);
+  padding: RelativeUnits(60, $adv-main-scaler) RelativeUnits(60, $adv-main-scaler);
   text-align: center;
   background: rgba(255, 255, 255, 0.38);
-  border-radius: RelativeUnits(10, $teaser-main-scaler);
+  border-radius: RelativeUnits(10, $adv-main-scaler);
 
   .toggler-wrap {
     width: 100%;
@@ -92,8 +100,8 @@ $teaser-main-scaler: 0.5;
     .switch {
       position: relative;
       display: inline-block;
-      @include width(70, $teaser-main-scaler);
-      height: RelativeUnits(28, $teaser-main-scaler);
+      @include width(70, $adv-main-scaler);
+      height: RelativeUnits(28, $adv-main-scaler);
       background: #ECECEC;
       @include border-radius(28);
       overflow: hidden;
@@ -118,25 +126,26 @@ $teaser-main-scaler: 0.5;
       &:before {
         position: absolute;
         content: "";
-        @include width(28.5, $teaser-main-scaler);
-        height: RelativeUnits(28.5, $teaser-main-scaler);
+        @include width(28.5, $adv-main-scaler);
+        height: RelativeUnits(28.5, $adv-main-scaler);
         @include border-radius(28.5);
         left: 0;
         bottom: 0;
-        background-color: #26C6DA;
+        background-color: #D81B60;
+
         -webkit-transition: .4s;
         transition: .4s;
       }
     }
 
     input:checked + .slider:before {
-      background-color: #D81B60;
+      background-color: #26C6DA;
     }
 
     input:checked + .slider:before {
-      -webkit-transform: translateX(RelativeUnits(42, $teaser-main-scaler));
-      -ms-transform: translateX(RelativeUnits(42, $teaser-main-scaler));
-      transform: translateX(RelativeUnits(42, $teaser-main-scaler));
+      -webkit-transform: translateX(RelativeUnits(42, $adv-main-scaler));
+      -ms-transform: translateX(RelativeUnits(42, $adv-main-scaler));
+      transform: translateX(RelativeUnits(42, $adv-main-scaler));
     }
   }
 
