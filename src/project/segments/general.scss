@@ -1,11 +1,12 @@
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
+  text-decoration: none;
 }
 h2 {
   @include FontLineSize(0.4, 0.4, 0.2, 60, 1);
 }
-h3 {
+h3, a {
   @include FontLineSize(0.2, 0.2, 0.6, 20, 1);
 }
 p {
@@ -40,4 +41,15 @@ p {
 }
 .red-color {
   color: #D81B60;
+}
+.submit-button {
+  width: RelativeUnits(206, 0.5);
+  height: RelativeUnits(55, 0.5);
+  background: #D81B60;
+  box-shadow: 18px 24px 55px rgba(216, 27, 96, 0.29);
+  border-radius: RelativeUnits(50, 0.5);
+  color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

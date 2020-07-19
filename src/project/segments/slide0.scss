@@ -1,7 +1,8 @@
 $adv-main-scaler: 0.5;
-.adv {
+#adv {
   width: 100vw;
   height: 100vh;
+  min-height: 800px;
   background: linear-gradient(158.17deg, rgba(179, 185, 255, 0.36) 15.74%, rgba(113, 124, 237, 0.36) 93.63%), url('../img/background.svg');
   //filter: blur(7px);
   //-webkit-filter: blur(7px);
@@ -73,8 +74,6 @@ $adv-main-scaler: 0.5;
 .adv__item-wrap {
   @include width(1100, 0.8);
   max-width: 90vw;
-  display: flex;
-  justify-content: space-between;
 }
 
 .adv__item {
@@ -90,6 +89,7 @@ $adv-main-scaler: 0.5;
   text-align: center;
   background: rgba(255, 255, 255, 0.38);
   border-radius: RelativeUnits(10, $adv-main-scaler);
+  margin: 20px auto;
 
   .toggler-wrap {
     width: 100%;

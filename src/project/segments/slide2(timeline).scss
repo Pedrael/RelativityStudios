@@ -1,0 +1,7 @@
+#timeline {
+  .timeline__container {
+    @include margin-padding(('p-t': (140), 'p-b':(100)) );
+    background: linear-gradient(180deg, #FFFFFF 0%, #E7E7E7 100%);
+    @include min-height(611, 0.5);
+  }
+}
