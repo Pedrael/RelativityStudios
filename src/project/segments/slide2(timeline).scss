@@ -3,5 +3,65 @@
     @include margin-padding(('p-t': (140), 'p-b':(100)) );
     background: linear-gradient(180deg, #FFFFFF 0%, #E7E7E7 100%);
     @include min-height(611, 0.5);
+
+    .timeline__body {
+      display: grid;
+      @include width(1130, 0.8);
+      grid-template: 1px auto / repeat(6, auto);
+      @include margin-padding( ('m-t': (140 1)) );
+      justify-items: center;
+
+      .dashed-line {
+        border: 1px dashed #000000;
+        height: 1px;
+        grid-column: 1 / span 6;
+        width: 100%;
+      }
+
+      .item__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include margin-padding( ('m-t': (-16 0.5)) );
+        @include width(130, 0.5);
+        text-align: center;
+
+        .dot-wrap {
+          @include width(31, 0.5);
+          @include margin-padding( ('p-b': (40 0.5)) );
+        }
+      }
+
+      @for $i from 1 to 4 {
+        .i#{$i} { grid-column: #{$i+1} / span 1; }
+      }
+
+      @include _tablet-small {
+        grid-template: repeat(6, auto) / 1px RelativeUnits(300, 0.5);
+        width: auto;
+        @include min-height(1130, 0.8);
+
+        .dashed-line {
+          height: 100%;
+          width: 1px;
+          grid-column: auto;
+          grid-row: 1 / span 6;
+        }
+
+        .item__container {
+          grid-column: auto;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+        }
+
+        @for $i from 1 to 4 {
+          .i#{$i} { grid-row: #{$i+1} / span 1; }
+        }
+
+
+      }
+    }
   }
 }

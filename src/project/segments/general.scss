@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   text-decoration: none;
+  color: #423F57;
 }
 h2 {
   @include FontLineSize(0.4, 0.4, 0.2, 60, 1);
