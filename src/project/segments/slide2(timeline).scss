@@ -1,14 +1,15 @@
 #timeline {
   .timeline__container {
-    @include margin-padding(('p-t': (140), 'p-b':(100)) );
+    @include margin-padding(('p-t': (140 0.5), 'p-b':(100 0.5)) );
     background: linear-gradient(180deg, #FFFFFF 0%, #E7E7E7 100%);
     @include min-height(611, 0.5);
 
     .timeline__body {
+
       display: grid;
       @include width(1130, 0.8);
       grid-template: 1px auto / repeat(6, auto);
-      @include margin-padding( ('m-t': (140 1)) );
+      @include margin-padding( ('m-t': (140 0.5)) );
       justify-items: center;
 
       .dashed-line {
@@ -28,16 +29,17 @@
 
         .dot-wrap {
           @include width(31, 0.5);
-          @include margin-padding( ('p-b': (40 0.5)) );
+          @include margin-padding( ('m-b': (40 0.5)) );
         }
       }
 
-      @for $i from 1 to 4 {
+      @for $i from 1 to 5 {
         .i#{$i} { grid-column: #{$i+1} / span 1; }
       }
 
       @include _tablet-small {
         grid-template: repeat(6, auto) / 1px RelativeUnits(300, 0.5);
+        align-items: center;
         width: auto;
         @include min-height(1130, 0.8);
 
@@ -49,18 +51,20 @@
         }
 
         .item__container {
-          grid-column: auto;
+          @include margin-padding( ('m-t': (0), 'm-l': (-31 0.5)) );
           flex-direction: row;
           justify-content: center;
-          align-items: flex-start;
+          align-items: center;
           width: 100%;
+
+          .dot-wrap {
+            @include margin-padding( ('m-b': (0), 'm-r': (40 0.5)) );
+          }
         }
 
-        @for $i from 1 to 4 {
-          .i#{$i} { grid-row: #{$i+1} / span 1; }
+        @for $i from 1 to 5 {
+          .i#{$i} { grid-row: #{$i+1} / span 1; grid-column: auto; }
         }
-
-
       }
     }
   }
